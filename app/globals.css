@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 全局样式重置，贴合后台场景 */
+@layer base {
+  html {
+    font-family: Inter, system-ui, sans-serif;
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: #F7F8FA;
+    color: #1f2937;
+  }
+}
+
+/* 自定义组件样式，配合shadcn/ui使用 */
+@layer components {
+  .admin-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+  }
+  .admin-content {
+    flex: 1;
+    overflow: auto;
+    padding: 1rem;
+  }
+  @media (min-width: 768px) {
+    .admin-content {
+      padding: 1.5rem;
+    }
+  }
+}
